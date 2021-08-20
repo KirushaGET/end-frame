@@ -17,7 +17,7 @@ const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // Set your mapbox token here
 const geolocateStyle = {
   top: 0,
   left: 0,
-  padding: '11px'
+  padding: '10px'
 };
 
 const fullscreenControlStyle = {
