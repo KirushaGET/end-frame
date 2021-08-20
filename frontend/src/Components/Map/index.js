@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import MapGL, {
   Popup,
   NavigationControl,
@@ -45,8 +45,8 @@ const Map = () => {
     zoom: 12,
     bearing: 0,
     pitch: 0,
-    width: "100vw",
-    height: "100vh",
+    width: '100vw',
+    height: '100vh',
   });
   const [popupInfo, setPopupInfo] = useState(null);
   const [mapStyle, setMapStyle] = useState('');
@@ -61,7 +61,7 @@ const Map = () => {
         onViewportChange={setViewport}
         mapboxApiAccessToken={TOKEN}
       >
-        <Pins data={CITIES} onClick={setPopupInfo} />
+        <Pins data={CITIES} onClick={setPopupInfo}/>
 
         {popupInfo && (
           <Popup
@@ -72,18 +72,18 @@ const Map = () => {
             closeOnClick={false}
             onClose={setPopupInfo}
           >
-            <CityInfo info={popupInfo} />
+            <CityInfo info={popupInfo}/>
           </Popup>
         )}
 
-        <GeolocateControl style={geolocateStyle} />
-        <FullscreenControl style={fullscreenControlStyle} />
-        <NavigationControl style={navStyle} />
-        <ScaleControl style={scaleControlStyle} />
+        <GeolocateControl style={geolocateStyle}/>
+        <FullscreenControl style={fullscreenControlStyle}/>
+        <NavigationControl style={navStyle}/>
+        <ScaleControl style={scaleControlStyle}/>
         <ControlPanel setMapStyle={setMapStyle}/>
       </MapGL>
     </>
   );
-}
+};
 
 export default Map;
