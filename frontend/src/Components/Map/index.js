@@ -7,15 +7,12 @@ import MapGL, {
   ScaleControl,
   GeolocateControl
 } from 'react-map-gl';
-
-// import ControlPanel from './control-panel';
-import Pins from './pins';
-import CityInfo from './city-info';
-
-import CITIES from './cities.json';
+import ControlPanel from '../MapControl';
+import Pins from '../Pins';
+import CityInfo from '../City';
+import CITIES from '../City/cities.json';
 
 const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // Set your mapbox token here
-console.log(TOKEN)
 
 const geolocateStyle = {
   top: 0,
@@ -52,6 +49,7 @@ const Map = () => {
     height: "100vh",
   });
   const [popupInfo, setPopupInfo] = useState(null);
+  const [mapStyle, setMapStyle] = useState('');
 
   return (
     <>
@@ -59,7 +57,7 @@ const Map = () => {
         {...viewport}
         width="100%"
         height="100%"
-        // mapStyle="mapbox://styles/mapbox/dark-v9"
+        mapStyle={mapStyle}
         onViewportChange={setViewport}
         mapboxApiAccessToken={TOKEN}
       >
@@ -82,9 +80,8 @@ const Map = () => {
         <FullscreenControl style={fullscreenControlStyle} />
         <NavigationControl style={navStyle} />
         <ScaleControl style={scaleControlStyle} />
+        <ControlPanel setMapStyle={setMapStyle}/>
       </MapGL>
-
-      {/* <ControlPanel /> */}
     </>
   );
 }
