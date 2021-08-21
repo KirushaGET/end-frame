@@ -5,26 +5,26 @@ import userImg from '../../images/user/user.png';
 import './style.scss';
 
 const UserPage = () => {
-  const user = {name: 'Иван', secondName: 'Иванов', age: '30', profession: 'Слесарь'};
+  const user = {name: 'Ивановы', openPlaces: '1', description: 'Нужна нянька на 2 часа в день', date: '10 июня 2021г. - 20июня 2021г.'};
   const history = useHistory();
 
   return (
     <div className='main-container'>
-      <img 
-        src="https://image.flaticon.com/icons/png/512/93/93634.png" 
-        alt="back" 
+      <img
+        src="https://image.flaticon.com/icons/png/512/93/93634.png"
+        alt="back"
         className="back-img"
-        onClick={() => history.push('/map')} 
+        onClick={() => history.push('/map')}
       />
-      <img src={userImg} alt="userLogo"/>
+      <img src="https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg" alt="userLogo"/>
       <div className="body">
         <div className="content">
-          <p>Имя: {user.name}</p>
-          <p>Фамилия: {user.secondName}</p>
-          <p>Возвраст:  {user.age} лет</p>
-          <p>Профессия:  {user.profession}</p>
+          <p>Семья: {user.name}</p>
+          <p>Количество свободных мест: {user.openPlaces}</p>
+          <p>Описание:  {user.description} лет</p>
+          <p>Ориентировочные даты:  {user.date}</p>
         </div>
-        <div className="button"> 
+        <div className="button">
             <Button
               className="sign_in_btn"
               variant="contained"
