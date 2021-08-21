@@ -61,7 +61,7 @@ const StyleControls = ({setMapStyle}) => {
     buildings: '#c0c0c8',
     roads: 'darkgoldenrod',
     labels: '#392929',
-    background: '#EBF0F0'
+    background: 'seashell'
   };
 
   useEffect(() => {
