@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState, useEffect} from 'react';
+import {useEffect} from 'react';
 import {fromJS} from 'immutable';
 import MAP_STYLE from './map-style-basic-v8.json';
 import './style.scss';
@@ -47,55 +47,31 @@ function getMapStyle({visibility, color}) {
 }
 
 const StyleControls = ({setMapStyle}) => {
-  const [visibility, setVisibility] = useState({
+  const visibility = {
     water: true,
     parks: true,
     buildings: true,
     roads: true,
     labels: true,
     background: true
-  });
+  };
 
-  const [color, setColor] = useState({
-    water: '#DBE2E6',
-    parks: '#E6EAE9',
+  const color = {
+    water: '#65CAF6',
+    parks: '#4FE397',
     buildings: '#c0c0c8',
-    roads: '#ffffff',
-    labels: '#78888a',
+    roads: 'darkgoldenrod',
+    labels: '#392929',
     background: '#EBF0F0'
-  });
+  };
 
   useEffect(() => {
     setMapStyle(getMapStyle({visibility, color}));
   }, [visibility, color]);
 
-  const onColorChange = (name, value) => {
-    setColor({...color, [name]: value});
-  };
-
-  const onVisibilityChange = (name, value) => {
-    setVisibility({...visibility, [name]: value});
-  };
 
   return (
-    <div className="control-panel">
-      {categories.map(name => (
-        <div key={name} className="input">
-          <label>{name}</label>
-          <input
-            type="checkbox"
-            checked={visibility[name]}
-            onChange={evt => onVisibilityChange(name, evt.target.checked)}
-          />
-          <input
-            type="color"
-            value={color[name]}
-            disabled={!visibility[name]}
-            onChange={evt => onColorChange(name, evt.target.value)}
-          />
-        </div>
-      ))}
-    </div>
+    <div />
   );
 }
 
