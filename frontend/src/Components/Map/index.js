@@ -65,7 +65,6 @@ const Map = () => {
 
         {popupInfo && (
           <Popup
-            tipSize={5}
             anchor="top"
             longitude={popupInfo.longitude}
             latitude={popupInfo.latitude}

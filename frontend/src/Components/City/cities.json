@@ -1,3 +1,3 @@
 [
-  {"city":"Великий Новгород","population":"219 850","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg","latitude":58.5213,"longitude":31.271}
+  {"city":"Великий Новгород","population":"219 850", "description": "здесь появился первый водопровод, это родина русского православия", "image":"https://darsik.com/wp-content/uploads/2020/07/main___velikiy_novgorod___shutterstock_1377600905-1.oxzmu6aa5eja-1024x576.jpg","latitude":58.5213,"longitude":31.271}
 ]

@@ -3,17 +3,20 @@ import * as React from 'react';
 const CityInfo = (props) => {
   const {info} = props;
   const displayName = `${info.city}`;
+  const population = `${info.population}`;
+  const description = `${info.description}`;
 
   return (
     <div>
       <div>
-        {displayName} |{' '}
-        <a
-          target="_new"
-          href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${displayName}`}
-        >
-          Wikipedia
-        </a>
+        {displayName}
+      </div>
+      <hr />
+      <div>
+        Население: {population} человек
+      </div>
+      <div style={{width: "240px", marginBottom: '5px'}}>
+        Особенности: {description}
       </div>
       <img width={240} src={info.image}/>
     </div>
