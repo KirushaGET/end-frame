@@ -16,7 +16,6 @@ const Pins = (props) => {
         transitionInterpolator: new FlyToInterpolator({speed: 2}),
         transitionDuration: 'auto',
         zoom: 15,
-        minZoom: 9,
         bearing: 0,
         pitch: 0,
         width: '100vw',

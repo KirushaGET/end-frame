@@ -2,9 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import MapGL, {
   Popup,
-  NavigationControl,
   FullscreenControl,
-  ScaleControl,
   GeolocateControl, FlyToInterpolator
 } from 'react-map-gl';
 import ControlPanel from '../MapControl';
@@ -28,29 +26,16 @@ const fullscreenControlStyle = {
   padding: '10px'
 };
 
-const navStyle = {
-  top: 72,
-  left: 0,
-  padding: '10px'
-};
-
-const scaleControlStyle = {
-  bottom: 36,
-  left: 0,
-  padding: '10px'
-};
-
 const Map = () => {
   const [viewport, setViewport] = useState({
     latitude: 58.5213,
     longitude: 31.271,
     zoom: 12,
-    minZoom: 9,
     bearing: 0,
     pitch: 0,
     width: '100vw',
     height: '100vh',
-    transitionInterpolator: new FlyToInterpolator({speed: 1.2}),
+    transitionInterpolator: new FlyToInterpolator({speed: 2}),
     transitionDuration: 'auto'
   });
   const [popupInfo, setPopupInfo] = useState(null);
@@ -67,7 +52,6 @@ const Map = () => {
         mapStyle={mapStyle}
         onViewportChange={setViewport}
         mapboxApiAccessToken={TOKEN}
-
       >
         <Pins data={CITIES} onClick={setPopupInfo} setViewport={setViewport}/>
 
@@ -86,8 +70,6 @@ const Map = () => {
 
         <GeolocateControl style={geolocateStyle}/>
         <FullscreenControl style={fullscreenControlStyle}/>
-        <NavigationControl style={navStyle}/>
-        <ScaleControl style={scaleControlStyle}/>
         <ControlPanel setMapStyle={setMapStyle}/>
       </MapGL>
     </>
