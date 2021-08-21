@@ -9,7 +9,7 @@ function App() {
   //   return !localStorage.getItem("user");
   // };
 
-  document.body.style.backgroundColor = "rgb(151, 194, 234)";
+  document.body.style.backgroundColor = 'rgb(151, 194, 234)';
   return (
     <div className="App">
       <Switch>
@@ -22,7 +22,7 @@ function App() {
         <Route
           path="/map"
           // render={() => checkUserRoute() ? <Redirect to="/map"/> : <Map/>}
-          render={() =>  <Map/>}
+          render={() => <Map/>}
         />
         <Redirect to="/login"/>
         {/*{!localStorage.getItem("user") && <Redirect to="/login"/>}*/}

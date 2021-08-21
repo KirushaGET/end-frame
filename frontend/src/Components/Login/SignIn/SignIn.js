@@ -93,6 +93,7 @@ const SignIn = () => {
           </Link>
         </div>
         <Button
+          className="sign_in_btn"
           variant="contained"
           color="primary"
           onClick={handleLogin}

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 // import axios from "axios";
 import {
   Button,
@@ -7,26 +7,26 @@ import {
   InputAdornment,
   OutlinedInput,
   TextField
-} from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
-import "./SignUp.scss";
+} from '@material-ui/core';
+import { Visibility, VisibilityOff } from '@material-ui/icons';
+import './SignUp.scss';
 
 const SignUp = () => {
   const history = useHistory();
   const [user, setUser] = useState({
-    name: "",
-    lastName: "",
-    middleName: "",
-    login: "",
-    email: "",
-    password: "",
+    name: '',
+    lastName: '',
+    middleName: '',
+    login: '',
+    email: '',
+    password: '',
   });
 
   const [showPassword, setShowPassword] = useState({
     showPassword: false,
     showRepeatPassword: false,
   });
-  const [repeatPassword, setRepeatPassword] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState('');
 
   const handleSubmit = async () => {
     // try {
@@ -39,43 +39,43 @@ const SignUp = () => {
     //     }
     //   );
     //   localStorage.setItem("user", JSON.stringify(res.data));
-      history.push("/map");
+    history.push('/map');
     // } catch (e) {
     // }
   };
 
   const inputList = [
     {
-      value: "Имя",
-      name: "name"
+      value: 'Имя',
+      name: 'name'
     },
     {
-      value: "Фамилия",
-      name: "lastName"
+      value: 'Фамилия',
+      name: 'lastName'
     },
     {
-      value: "Отчество",
-      name: "middleName"
+      value: 'Отчество',
+      name: 'middleName'
     },
     {
-      value: "Логин",
-      name: "login"
+      value: 'Логин',
+      name: 'login'
     },
     {
-      value: "E-mail",
-      name: "email"
+      value: 'E-mail',
+      name: 'email'
     },
   ];
 
   const updateUser = (e) => {
-    setUser(prevUser => ({ ...prevUser, [e.target.name]: e.target.value }));
+    setUser(prevUser => ({...prevUser, [e.target.name]: e.target.value}));
   };
 
   const handleClickShowPassword = () => {
-    setShowPassword({ ...showPassword, showPassword: !showPassword.showPassword });
+    setShowPassword({...showPassword, showPassword: !showPassword.showPassword});
   };
   const handleClickShowRepeatPassword = () => {
-    setShowPassword({ ...showPassword, showRepeatPassword: !showPassword.showRepeatPassword });
+    setShowPassword({...showPassword, showRepeatPassword: !showPassword.showRepeatPassword});
   };
 
   const handleMouseDownPassword = (event) => {
@@ -102,7 +102,7 @@ const SignUp = () => {
           <p className="input_text">Пароль: </p>
           <OutlinedInput
             className="input"
-            type={showPassword.showPassword ? "text" : "password"}
+            type={showPassword.showPassword ? 'text' : 'password'}
             name="password"
             onChange={(e) => updateUser(e)}
             endAdornment={
@@ -124,7 +124,7 @@ const SignUp = () => {
           <OutlinedInput
             className="input"
             value={repeatPassword}
-            type={showPassword.showRepeatPassword ? "text" : "password"}
+            type={showPassword.showRepeatPassword ? 'text' : 'password'}
             name="repeatPassword"
             onChange={(e) => setRepeatPassword(e.target.value)}
             endAdornment={
@@ -149,6 +149,7 @@ const SignUp = () => {
           </Link>
         </div>
         <Button
+          className="sign_in_btn"
           variant="contained"
           color="primary"
           onClick={handleSubmit}

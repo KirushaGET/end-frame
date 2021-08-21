@@ -3,28 +3,29 @@
 
   .header {
     width: 100%;
-    background-color: rgb(151, 194, 234);
+    background-color: #e1ba7f;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .logo_icon {
-      position: absolute;
-      left: 50px;
-      fill: rgba(0, 0, 0, 0.8);
-
-    }
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
 
     p {
-      color: white;
+      color: #ec5353;
       font-weight: bold;
-      font-size: 44px;
+      font-size: 80px;
       margin: 20px 0;
+      width: 50%;
     }
   }
 
+  .logo_icon {
+    width: 150px;
+    height: 150px;
+  }
+
   .inner_wrapper {
-    margin: 10vh 0;
+    margin: 3vh 0;
     display: flex;
     justify-content: center;
   }

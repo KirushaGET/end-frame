@@ -19,7 +19,9 @@
       width: 100%;
 
       .input_text {
-        font-size: 16px;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 1rem 0;
       }
 
       .MuiOutlinedInput-root.input {
@@ -47,8 +49,22 @@
     margin-top: 4vh;
     justify-content: space-between;
 
+    .sign_in_btn.MuiButton-root {
+      background-color: #be8939;
+
+      &:hover {
+        background-color: #e08d12;
+      }
+    }
+
     a {
       text-decoration: none;
+    }
+
+    span {
+      font-family: 'Amatic SC', cursive;
+      font-size: 25px;
+      font-weight: 700;
     }
   }
 }
