@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./personStyle.scss"
 
 const Person = (props) => {
   const {info} = props;
@@ -8,19 +9,16 @@ const Person = (props) => {
 
   return (
     <div>
-      <div>
-        {displayName}
-      </div>
-      <div>
-        {displayAge}
+      <div style={{display: "flex"}}>
+        <p className="person-text">{displayName}, {displayAge} </p>
       </div>
       <hr/>
       <div style={{width: '240px', marginBottom: '5px'}}>
-        Описание: {description}
+        <p className="person-text">Описание: {description}</p>
       </div>
       <img width={240} src={info.image} alt="user"/>
       <div>
-        <a href="/user/1">Подробнее</a>
+        <a className="person-details-btn"  href="/user/1">Подробнее</a>
       </div>
     </div>
   );

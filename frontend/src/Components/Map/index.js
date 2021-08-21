@@ -47,10 +47,10 @@ const Map = () => {
 
   return (
     <>
-      <ReactAudioPlayer
-        src={music}
-        autoPlay
-      />
+      {/*<ReactAudioPlayer*/}
+      {/*  src={music}*/}
+      {/*  autoPlay*/}
+      {/*/>*/}
       <MapGL
         {...viewport}
         mapStyle={mapStyle}

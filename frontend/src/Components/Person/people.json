@@ -1,9 +1,9 @@
 [
   {
-    "name": "Дмитрий",
-    "age": "23 года",
-    "description": "я живу в Ермолино",
-    "image": "https://www.belpressa.ru/media/filer_public_thumbnails/filer_public/94/51/94517879-fc86-4af1-8ea7-b776c1b01686/dmitrii_ragulin.jpg__650x486_q75_subsampling-2_upscale.jpg",
+    "name": "Ивановы",
+    "age": "1 свободное место",
+    "description": "Мы живем в Ермолино",
+    "image": "https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg",
     "latitude": 58.53590,
     "longitude": 31.08155
   }
