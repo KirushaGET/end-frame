@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Marker, FlyToInterpolator } from 'react-map-gl';
-import MarkerImg from './marker.png';
+import observerMarker from '../../images/observerMarker.png';
 
 const SIZE = 40;
 
@@ -8,11 +8,11 @@ const Pins = (props) => {
   const { data, onClick, setViewport } = props;
 
   return data.map((city, index) => (
-    <Marker key={`marker-${index}`} longitude={city.longitude} latitude={city.latitude} 
+    <Marker key={`marker-${index}`} longitude={city.longitude} latitude={city.latitude}
     onClick={() => setViewport(
       {
-        latitude: city.latitude, 
-        longitude: city.longitude, 
+        latitude: city.latitude,
+        longitude: city.longitude,
         transitionInterpolator: new FlyToInterpolator({speed: 2}),
         transitionDuration: 'auto',
         zoom: 15,
@@ -32,7 +32,7 @@ const Pins = (props) => {
           transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
         }}
         onClick={() => onClick(city)}
-        src={MarkerImg}
+        src={observerMarker}
         alt="marker"
       />
     </Marker>
