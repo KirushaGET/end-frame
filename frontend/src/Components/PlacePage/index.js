@@ -1,5 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import placeAudio from '../../audio/placeAudio.ogg';
+import { Box } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
 import './style.scss';
 import ReactAudioPlayer from 'react-audio-player';
 
@@ -20,9 +22,15 @@ const PlacePage = () => {
         className="back-img"
         onClick={() => history.push('/map')}
       />
-      <img
-        src="https://darsik.com/wp-content/uploads/2020/07/main___velikiy_novgorod___shutterstock_1377600905-1.oxzmu6aa5eja-1024x576.jpg"
-        alt="userLogo"/>
+      <div className="image-and-rating">
+        <img 
+          src="https://darsik.com/wp-content/uploads/2020/07/main___velikiy_novgorod___shutterstock_1377600905-1.oxzmu6aa5eja-1024x576.jpg"
+          alt="placeLogo"
+        />
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Rating name="read-only" value={5} readOnly />
+        </Box>
+      </div>
       <div className="body">
         <div className="content">
           <p>Название места: {place.name}</p>

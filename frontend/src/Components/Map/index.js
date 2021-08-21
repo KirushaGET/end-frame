@@ -15,7 +15,7 @@ import music from '../../audio/background-music.ogg';
 import PeoplePin from '../PeoplePin';
 import Person from '../Person';
 
-const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // Set your mapbox token here
+const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const geolocateStyle = {
   top: 0,

@@ -1,5 +1,6 @@
 import react, { useState } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Box } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
 import { useHistory } from 'react-router-dom';
 import userImg from '../../images/user/user.png';
 import ModalWindow from '../ModalWindow';
@@ -24,7 +25,12 @@ const UserPage = () => {
         className="back-img"
         onClick={() => history.push('/map')}
       />
-      <img src="https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg" alt="userLogo"/>
+      <div className="image-and-rating">
+        <img src="https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg" alt="userLogo"/>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Rating name="read-only" value={5} readOnly />
+        </Box>
+      </div>
       <div className="body">
         <div className="content">
           <p>Семья: {user.name}</p>
