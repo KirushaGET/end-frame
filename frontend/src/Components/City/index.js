@@ -6,8 +6,6 @@ const CityInfo = (props) => {
   const population = `${info.population}`;
   const description = `${info.description}`;
 
-  console.log(info.image);
-
   return (
     <div>
       <div>

@@ -18,7 +18,10 @@ const Person = (props) => {
       <div style={{width: '240px', marginBottom: '5px'}}>
         Описание: {description}
       </div>
-      <img width={240} src={info.image}/>
+      <img width={240} src={info.image} alt="user"/>
+      <div>
+        <a href="/user/1">Подробнее</a>
+      </div>
     </div>
   );
 };
