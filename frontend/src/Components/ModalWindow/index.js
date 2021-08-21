@@ -59,7 +59,7 @@ export default function CustomizedDialogs({open, setOpen}) {
     <div>
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Вы уверены?
+          Напоминание
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom style={{ fontSize: '20px'}}>
