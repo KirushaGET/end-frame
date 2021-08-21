@@ -1,13 +1,14 @@
 html {
-  background-color: #e1ba7f;
+  background-color: white;
 }
 
 .App {
   text-align: center;
   margin: 0;
+  padding: 0;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
-  background-color: #e1ba7f;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

@@ -3,13 +3,13 @@ import './App.css';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Registration from './Components/Registration/Registration';
+import UserPage from './Components/UserPage';
 
 function App() {
   // const checkUserRoute = () => {
   //   return !localStorage.getItem("user");
   // };
 
-  document.body.style.backgroundColor = 'rgb(151, 194, 234)';
 
   return (
     <div className="App">
@@ -19,6 +19,9 @@ function App() {
         </Route>
         <Route path="/registration">
           <Registration/>
+        </Route>
+        <Route path="/user/:id">
+          <UserPage />
         </Route>
         <Route
           path="/map"
