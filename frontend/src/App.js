@@ -2,7 +2,7 @@ import Map from './Components/Map';
 import './App.css';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
-import Registration from './Components/Rerestration/Registration';
+import Registration from './Components/Registration/Registration';
 
 function App() {
   // const checkUserRoute = () => {

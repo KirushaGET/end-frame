@@ -9,8 +9,11 @@ import ControlPanel from '../MapControl';
 import Pins from '../Pins';
 import CityInfo from '../City';
 import CITIES from '../City/cities.json';
+import PEOPLE from '../Person/people.json';
 import ReactAudioPlayer from 'react-audio-player';
 import music from '../../audio/background-music.ogg';
+import PeoplePin from '../PeoplePin';
+import Person from '../Person';
 
 const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // Set your mapbox token here
 
@@ -39,6 +42,7 @@ const Map = () => {
     transitionDuration: 'auto'
   });
   const [popupInfo, setPopupInfo] = useState(null);
+  const [personInfo, setPersonInfo] = useState(null);
   const [mapStyle, setMapStyle] = useState('');
 
   return (
@@ -54,6 +58,7 @@ const Map = () => {
         mapboxApiAccessToken={TOKEN}
       >
         <Pins data={CITIES} onClick={setPopupInfo} setViewport={setViewport}/>
+        <PeoplePin data={PEOPLE} onClick={setPersonInfo} setViewport={setViewport}/>
 
         {popupInfo && (
           <Popup
@@ -65,6 +70,19 @@ const Map = () => {
             onClose={setPopupInfo}
           >
             <CityInfo info={popupInfo}/>
+          </Popup>
+        )}
+
+        {personInfo && (
+          <Popup
+            anchor="top"
+            style={{fontSize: '30px'}}
+            longitude={personInfo.longitude}
+            latitude={personInfo.latitude}
+            closeOnClick={false}
+            onClose={setPersonInfo}
+          >
+            <Person info={personInfo}/>
           </Popup>
         )}
 

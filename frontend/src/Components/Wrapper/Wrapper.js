@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import SignIn from "../Login/SignIn/SignIn";
-import SignUp from "../Rerestration/SignUp/SignUp";
+import SignUp from "../Registration/SignUp/SignUp";
 import logo from "../../images/gerb_novgorodskoj_oblasti_Abali.png"
 import "./WrapperStyles.scss";
 import * as React from 'react';
