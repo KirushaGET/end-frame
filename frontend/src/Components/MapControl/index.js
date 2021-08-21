@@ -57,7 +57,7 @@ const StyleControls = ({setMapStyle}) => {
 
   const color = {
     water: '#65CAF6',
-    parks: '#4FE397',
+    parks: '#8ac2a8',
     buildings: '#c0c0c8',
     roads: 'darkgoldenrod',
     labels: '#392929',

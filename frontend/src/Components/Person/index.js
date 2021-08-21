@@ -14,9 +14,9 @@ const Person = (props) => {
       <div>
         {displayAge}
       </div>
-      <hr />
-      <div style={{width: "240px", marginBottom: '5px'}}>
-        Особенности: {description}
+      <hr/>
+      <div style={{width: '240px', marginBottom: '5px'}}>
+        Описание: {description}
       </div>
       <img width={240} src={info.image}/>
     </div>
