@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-// import axios from "axios";
+import axios from "axios";
 import {
   Button,
   IconButton,
@@ -29,19 +29,20 @@ const SignUp = () => {
   const [repeatPassword, setRepeatPassword] = useState('');
 
   const handleSubmit = async () => {
-    // try {
-    //   const res = await axios.post("http://10.131.56.106:4000/registration",
-    //     user,
-    //     {
-    //       headers: {
-    //         "Access-Control-Allow-Origin": "*",
-    //       },
-    //     }
-    //   );
-    //   localStorage.setItem("user", JSON.stringify(res.data));
-    history.push('/map');
-    // } catch (e) {
-    // }
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/registration`,
+        user,
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+      localStorage.setItem("user", JSON.stringify(res.data));
+      history.push('/map');
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const inputList = [

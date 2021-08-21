@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import {
   Button,
   IconButton,
@@ -35,20 +35,20 @@ const SignIn = () => {
   };
 
   const handleLogin = async () => {
-    // try {
-    //   const res = await axios.post("http://10.131.56.106:4000/login",
-    //     user,
-    //     {
-    //       headers: {
-    //         "Access-Control-Allow-Origin": "*",
-    //       },
-    //     }
-    //   );
-    //   localStorage.setItem("user", JSON.stringify(res.data));
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`,
+        user,
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+      localStorage.setItem("user", JSON.stringify(res.data));
       history.push("/map");
-    // } catch (e) {
-    //   console.log(e);
-    // }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
