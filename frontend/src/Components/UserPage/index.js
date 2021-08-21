@@ -2,7 +2,6 @@ import react, { useState } from 'react';
 import { Button, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import { useHistory } from 'react-router-dom';
-import userImg from '../../images/user/user.png';
 import ModalWindow from '../ModalWindow';
 import './style.scss';
 
@@ -18,7 +17,7 @@ const UserPage = () => {
   const history = useHistory();
 
   return (
-    <div className="main-container">
+    <div className="main-container-user">
       <img
         src="https://image.flaticon.com/icons/png/512/93/93634.png"
         alt="back"
@@ -27,8 +26,8 @@ const UserPage = () => {
       />
       <div className="image-and-rating">
         <img src="https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg" alt="userLogo"/>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <span className='rating'>Рейтинг:</span> 
+        <Box className='rating-box' component="fieldset" mb={3} borderColor="transparent">
+          <span className='rating'>Рейтинг:</span>
           <Rating name="read-only" value={5} readOnly />
         </Box>
       </div>

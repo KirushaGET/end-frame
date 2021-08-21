@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 import {
   Button,
   IconButton,
   InputAdornment,
   OutlinedInput,
   TextField
-} from "@material-ui/core";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
-import "./SignIn.scss";
+} from '@material-ui/core';
+import { Visibility, VisibilityOff } from '@material-ui/icons';
+import './SignIn.scss';
 
 const SignIn = () => {
   const history = useHistory();
   const [user, setUser] = React.useState({
-    login: "",
-    password: "",
+    login: '',
+    password: '',
   });
 
   const [showPassword, setShowPassword] = useState({
@@ -45,7 +45,7 @@ const SignIn = () => {
     //     }
     //   );
     //   localStorage.setItem("user", JSON.stringify(res.data));
-      history.push("/map");
+    history.push('/map');
     // } catch (e) {
     //   console.log(e);
     // }
@@ -67,7 +67,7 @@ const SignIn = () => {
           <p className="input_text">Пароль: </p>
           <OutlinedInput
             className="input"
-            type={showPassword.showPassword ? "text" : "password"}
+            type={showPassword.showPassword ? 'text' : 'password'}
             name="password"
             value={user.password}
             onChange={(e) => updateUser(e)}

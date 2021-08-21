@@ -15,7 +15,7 @@ const PlacePage = () => {
   const history = useHistory();
 
   return (
-    <div className="main-container">
+    <div className="main-container-place">
       <img
         src="https://image.flaticon.com/icons/png/512/93/93634.png"
         alt="back"
@@ -23,13 +23,13 @@ const PlacePage = () => {
         onClick={() => history.push('/map')}
       />
       <div className="image-and-rating">
-        <img 
+        <img
           src="https://darsik.com/wp-content/uploads/2020/07/main___velikiy_novgorod___shutterstock_1377600905-1.oxzmu6aa5eja-1024x576.jpg"
           alt="placeLogo"
         />
-        <Box component="fieldset" borderColor="transparent">
-          <span className='rating'>Рейтинг:</span> 
-          <Rating name="read-only" value={5} readOnly />
+        <Box className="rating-box" component="fieldset" borderColor="transparent">
+          <span className="rating">Рейтинг:</span>
+          <Rating name="read-only" value={5} readOnly/>
         </Box>
       </div>
       <div className="body">
