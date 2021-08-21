@@ -3,6 +3,8 @@ import SignIn from "../Login/SignIn/SignIn";
 import SignUp from "../Rerestration/SignUp/SignUp";
 import logo from "../../images/gerb_novgorodskoj_oblasti_Abali.png"
 import "./WrapperStyles.scss";
+import * as React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
 
 const Login = () => {
   document.body.style.backgroundColor = "#e1ba7f";

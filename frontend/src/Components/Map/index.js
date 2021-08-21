@@ -11,6 +11,8 @@ import ControlPanel from '../MapControl';
 import Pins from '../Pins';
 import CityInfo from '../City';
 import CITIES from '../City/cities.json';
+import ReactAudioPlayer from 'react-audio-player';
+import music from '../../audio/background-music.ogg';
 
 const TOKEN = process.env.REACT_APP_MAPBOX_TOKEN; // Set your mapbox token here
 
@@ -53,6 +55,10 @@ const Map = () => {
 
   return (
     <>
+      <ReactAudioPlayer
+        src={music}
+        autoPlay
+      />
       <MapGL
         {...viewport}
         width="100%"
@@ -60,6 +66,7 @@ const Map = () => {
         mapStyle={mapStyle}
         onViewportChange={setViewport}
         mapboxApiAccessToken={TOKEN}
+
       >
         <Pins data={CITIES} onClick={setPopupInfo}/>
 

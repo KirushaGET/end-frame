@@ -10,6 +10,7 @@ function App() {
   // };
 
   document.body.style.backgroundColor = 'rgb(151, 194, 234)';
+
   return (
     <div className="App">
       <Switch>
