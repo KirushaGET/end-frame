@@ -5,7 +5,7 @@ import MapGL, {
   NavigationControl,
   FullscreenControl,
   ScaleControl,
-  GeolocateControl
+  GeolocateControl, FlyToInterpolator
 } from 'react-map-gl';
 import ControlPanel from '../MapControl';
 import Pins from '../Pins';
@@ -43,10 +43,13 @@ const Map = () => {
     latitude: 58.5213,
     longitude: 31.271,
     zoom: 12,
+    minZoom: 9,
     bearing: 0,
     pitch: 0,
     width: '100vw',
     height: '100vh',
+    transitionInterpolator: new FlyToInterpolator({speed: 1.2}),
+    transitionDuration: 'auto'
   });
   const [popupInfo, setPopupInfo] = useState(null);
   const [mapStyle, setMapStyle] = useState('');
@@ -55,17 +58,16 @@ const Map = () => {
     <>
       <MapGL
         {...viewport}
-        width="100%"
-        height="100%"
         mapStyle={mapStyle}
         onViewportChange={setViewport}
         mapboxApiAccessToken={TOKEN}
       >
-        <Pins data={CITIES} onClick={setPopupInfo}/>
+        <Pins data={CITIES} onClick={setPopupInfo} setViewport={setViewport}/>
 
         {popupInfo && (
           <Popup
             anchor="top"
+            style={{fontSize: '30px'}}
             longitude={popupInfo.longitude}
             latitude={popupInfo.latitude}
             closeOnClick={false}
