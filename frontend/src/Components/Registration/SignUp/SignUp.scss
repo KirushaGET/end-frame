@@ -18,12 +18,6 @@
       flex-direction: column;
       width: 100%;
 
-      .input_text {
-        font-size: 30px;
-        font-weight: 700;
-        margin: 1rem 0;
-      }
-
       .MuiOutlinedInput-root.input {
         background: #fff;
       }
@@ -32,7 +26,7 @@
         background: #fff;
       }
 
-      .MuiFormControl-root.select_dorm {
+      .MuiFormControl-root.select_role {
         background: #fff;
       }
     }
@@ -67,5 +61,11 @@
       font-weight: 700;
     }
   }
+}
+
+.input_text {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 1rem 0;
 }
 

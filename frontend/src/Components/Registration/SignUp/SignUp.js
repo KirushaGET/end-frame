@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import axios from "axios";
+import axios from 'axios';
 import {
-  Button,
+  Button, FormControl,
   IconButton,
-  InputAdornment,
-  OutlinedInput,
+  InputAdornment, MenuItem,
+  OutlinedInput, Select,
   TextField
 } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
@@ -39,7 +39,7 @@ const SignUp = () => {
     //     }
     //   );
     //   localStorage.setItem("user", JSON.stringify(res.data));
-      history.push('/map');
+    history.push('/map');
     // } catch (e) {
     //   console.log(e);
     // }
@@ -65,6 +65,17 @@ const SignUp = () => {
     {
       value: 'E-mail',
       name: 'email'
+    },
+  ];
+
+  const role = [
+    {
+      value: 1,
+      name: 'Турист'
+    },
+    {
+      value: 2,
+      name: 'Местный житель'
     },
   ];
 
@@ -98,6 +109,23 @@ const SignUp = () => {
           </div>
         ))}
         <div className="input_fields">
+          <p className="input_text">Роль: </p>
+          <FormControl className="select_role" variant="outlined">
+            <Select
+              onChange={(e) => updateUser(e)}
+              name="dorm"
+              style={{background: '#fff'}}
+            >
+              {role.map((item, index) =>
+                <MenuItem
+                  key={`key-${index}`}
+                  value={item.value}
+                >
+                  {item.name}
+                </MenuItem>
+              )}
+            </Select>
+          </FormControl>
         </div>
         <div className="input_field">
           <p className="input_text">Пароль: </p>
