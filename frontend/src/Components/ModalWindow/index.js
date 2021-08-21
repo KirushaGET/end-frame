@@ -23,13 +23,13 @@ const styles = (theme) => ({
 });
 
 const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
+  const {children, classes, onClose, ...other} = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography variant="h5">{children}</Typography>
       {onClose ? (
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon />
+          <CloseIcon/>
         </IconButton>
       ) : null}
     </MuiDialogTitle>
@@ -62,8 +62,8 @@ export default function CustomizedDialogs({open, setOpen}) {
           Напоминание
         </DialogTitle>
         <DialogContent dividers>
-          <Typography gutterBottom style={{ fontSize: '20px'}}>
-            Обязательным условием проживания является ознакомление с культурными ценностями этой семьи и этого города (местным фольклором).
+          <Typography gutterBottom style={{fontSize: '20px'}}>
+            Обязательным условием проживания является ознакомление с местным фольклором.
             Вы согласны?
           </Typography>
         </DialogContent>
