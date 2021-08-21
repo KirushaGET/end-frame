@@ -27,7 +27,8 @@ const PlacePage = () => {
           src="https://darsik.com/wp-content/uploads/2020/07/main___velikiy_novgorod___shutterstock_1377600905-1.oxzmu6aa5eja-1024x576.jpg"
           alt="placeLogo"
         />
-        <Box component="fieldset" mb={3} borderColor="transparent">
+        <Box component="fieldset" borderColor="transparent">
+          <span className='rating'>Рейтинг:</span> 
           <Rating name="read-only" value={5} readOnly />
         </Box>
       </div>

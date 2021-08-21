@@ -28,6 +28,7 @@ const UserPage = () => {
       <div className="image-and-rating">
         <img src="https://www.psychologos.ru/images/articles/showcases/497sdt9f.jpg" alt="userLogo"/>
         <Box component="fieldset" mb={3} borderColor="transparent">
+          <span className='rating'>Рейтинг:</span> 
           <Rating name="read-only" value={5} readOnly />
         </Box>
       </div>
