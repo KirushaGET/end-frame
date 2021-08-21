@@ -21,7 +21,7 @@ const UserPage = () => {
         <div className="content">
           <p>Семья: {user.name}</p>
           <p>Количество свободных мест: {user.openPlaces}</p>
-          <p>Описание:  {user.description} лет</p>
+          <p>Описание:  {user.description}</p>
           <p>Ориентировочные даты:  {user.date}</p>
         </div>
         <div className="button">
