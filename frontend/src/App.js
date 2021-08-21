@@ -4,12 +4,12 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Registration from './Components/Registration/Registration';
 import UserPage from './Components/UserPage';
+import PlacePage from './Components/PlacePage';
 
 function App() {
   // const checkUserRoute = () => {
   //   return !localStorage.getItem("user");
   // };
-
 
   return (
     <div className="App">
@@ -21,7 +21,10 @@ function App() {
           <Registration/>
         </Route>
         <Route path="/user/:id">
-          <UserPage />
+          <UserPage/>
+        </Route>
+        <Route path="/place/:id">
+          <PlacePage/>
         </Route>
         <Route
           path="/map"

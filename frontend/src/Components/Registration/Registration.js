@@ -1,5 +1,5 @@
-import Wrapper from "../Wrapper/Wrapper";
-import "./RegistrationStyles.scss";
+import Wrapper from '../Wrapper/Wrapper';
+import './RegistrationStyles.scss';
 
 const Registration = () => {
   return (

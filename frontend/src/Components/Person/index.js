@@ -1,5 +1,6 @@
 import * as React from 'react';
 import "./personStyle.scss"
+import { Link } from 'react-router-dom';
 
 const Person = (props) => {
   const {info} = props;
@@ -18,7 +19,7 @@ const Person = (props) => {
       </div>
       <img width={240} src={info.image} alt="user"/>
       <div>
-        <a className="person-details-btn"  href="/user/1">Подробнее</a>
+        <Link className="person-details-btn"  to="/user/1">Подробнее</Link>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+import "./placeStyle.scss"
 
 const CityInfo = (props) => {
   const {info} = props;
@@ -9,16 +11,19 @@ const CityInfo = (props) => {
   return (
     <div>
       <div>
-        {displayName}
+        <p className="place-text">{displayName}</p>
       </div>
       <hr />
       <div>
-        Население: {population} человек
+        <p className="place-text">Население: {population} человек</p>
       </div>
       <div style={{width: "240px", marginBottom: '5px'}}>
-        Особенности: {description}
+        <p className="place-text">Особенности: {description}</p>
       </div>
       <img width={240} src={info.image}/>
+      <div>
+        <Link className="place-details-btn"  to="/place/1">Подробнее</Link>
+      </div>
     </div>
   );
 };
