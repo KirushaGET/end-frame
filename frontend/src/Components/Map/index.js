@@ -10,8 +10,6 @@ import Pins from '../Pins';
 import CityInfo from '../City';
 import CITIES from '../City/cities.json';
 import PEOPLE from '../Person/people.json';
-import ReactAudioPlayer from 'react-audio-player';
-import music from '../../audio/background-music.ogg';
 import PeoplePin from '../PeoplePin';
 import Person from '../Person';
 
@@ -47,10 +45,6 @@ const Map = () => {
 
   return (
     <>
-      {/*<ReactAudioPlayer*/}
-      {/*  src={music}*/}
-      {/*  autoPlay*/}
-      {/*/>*/}
       <MapGL
         {...viewport}
         mapStyle={mapStyle}

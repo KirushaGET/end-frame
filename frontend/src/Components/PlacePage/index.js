@@ -2,8 +2,8 @@ import { useHistory } from 'react-router-dom';
 import placeAudio from '../../audio/placeAudio.ogg';
 import { Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-import './style.scss';
 import ReactAudioPlayer from 'react-audio-player';
+import './style.scss';
 
 const PlacePage = () => {
   const place = {

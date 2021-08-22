@@ -20,7 +20,7 @@ const CityInfo = (props) => {
       <div style={{width: "240px", marginBottom: '5px'}}>
         <p className="place-text">Особенности: {description}</p>
       </div>
-      <img width={240} src={info.image}/>
+      <img width={240} src={info.image} alt="city"/>
       <div>
         <Link className="place-details-btn"  to="/place/1">Подробнее</Link>
       </div>

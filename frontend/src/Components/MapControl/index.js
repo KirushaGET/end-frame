@@ -66,6 +66,7 @@ const StyleControls = ({setMapStyle}) => {
 
   useEffect(() => {
     setMapStyle(getMapStyle({visibility, color}));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visibility, color]);
 
 

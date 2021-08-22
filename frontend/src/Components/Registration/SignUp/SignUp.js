@@ -39,7 +39,7 @@ const SignUp = () => {
         }
       );
       localStorage.setItem("user", JSON.stringify(res.data));
-    history.push('/map');
+      history.push('/map');
     } catch (e) {
       console.log(e);
     }
@@ -86,6 +86,7 @@ const SignUp = () => {
   const handleClickShowPassword = () => {
     setShowPassword({...showPassword, showPassword: !showPassword.showPassword});
   };
+  
   const handleClickShowRepeatPassword = () => {
     setShowPassword({...showPassword, showRepeatPassword: !showPassword.showRepeatPassword});
   };

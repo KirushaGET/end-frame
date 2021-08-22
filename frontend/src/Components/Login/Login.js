@@ -1,6 +1,6 @@
+import * as React from 'react';
 import Wrapper from "../Wrapper/Wrapper";
 import "./LoginStyles.scss";
-import * as React from 'react';
 
 const Login = () => {
   return (

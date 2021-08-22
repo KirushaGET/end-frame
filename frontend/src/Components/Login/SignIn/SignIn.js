@@ -13,7 +13,7 @@ import './SignIn.scss';
 
 const SignIn = () => {
   const history = useHistory();
-  const [user, setUser] = React.useState({
+  const [user, setUser] = useState({
     login: '',
     password: '',
   });
@@ -45,7 +45,7 @@ const SignIn = () => {
         }
       );
       localStorage.setItem("user", JSON.stringify(res.data));
-    history.push('/map');
+      history.push('/map');
     } catch (e) {
       console.log(e);
     }

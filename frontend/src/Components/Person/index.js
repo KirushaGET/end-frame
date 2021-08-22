@@ -3,7 +3,7 @@ import "./personStyle.scss"
 import { Link } from 'react-router-dom';
 
 const Person = (props) => {
-  const {info} = props;
+  const { info } = props;
   const displayName = `${info.name}`;
   const displayAge = `${info.age}`;
   const description = `${info.description}`;

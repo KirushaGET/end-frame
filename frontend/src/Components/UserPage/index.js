@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import { useHistory } from 'react-router-dom';
