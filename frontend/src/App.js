@@ -8,7 +8,7 @@ import PlacePage from './Components/PlacePage';
 
 function App() {
   const checkUserRoute = () => {
-    return !localStorage.getItem("user");
+    // return !localStorage.getItem("user");
   };
 
   return (
@@ -28,9 +28,11 @@ function App() {
         </Route>
         <Route
           path="/map"
-          render={() => checkUserRoute() ? <Redirect to="/map"/> : <Map/>}
-        />
-        {!localStorage.getItem("user") && <Redirect to="/login"/>}
+          // render={() => checkUserRoute() ? <Redirect to="/map"/> : <Map/>}
+        >
+        <Map />
+        </Route>
+        {/* {!localStorage.getItem("user") && <Redirect to="/login"/>} */}
       </Switch>
     </div>
   );
